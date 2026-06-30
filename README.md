@@ -22,6 +22,6 @@ Adolescentes e jovens que gostam de jogos de plataforma e exploração.
 
 ## Como executar
 1. Abra a página do jogo no Itch.io.
-2. Clique em .
+2. Clique em Play.
 3. Espere alguns segundos para o jogo carregar no navegador.
 4. Depois do carregamento, clique na tela do jogo para começar.
