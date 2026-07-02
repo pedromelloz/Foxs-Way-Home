@@ -1,56 +1,106 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour // Nome em inglês é padrão
+public class PlayerController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float moveSpeed = 5f;
-    public float jumpForce = 10f;
-    
-    [Header("References")]
-    public Rigidbody2D rb; // Variável pública para aparecer no Inspector
-    private bool isGrounded = false;
+    [Header("Configurações de Movimento")]
+    [SerializeField] private float velocidade = 8f;
+    [SerializeField] private float forcaPulo = 12f;
 
-    void Start()
+    [Header("Configurações de Dash")]
+    [SerializeField] private float velocidadeDash = 24f;
+    [SerializeField] private float duracaoDash = 0.2f;
+    [SerializeField] private float cooldownDash = 1f;
+    private bool podeDash = true;
+    private bool estaNoDash;
+
+    [Header("Inputs (Configure no Inspector)")]
+    [SerializeField] private InputAction moverAcao;
+    [SerializeField] private InputAction pularAcao;
+    [SerializeField] private InputAction dashAcao; // Nova ação para o Dash
+
+    [Header("Verificação de Chão")]
+    [SerializeField] private Transform checadorDeChao;
+    [SerializeField] private LayerMask camadaChao;
+    private bool estaNoChao;
+
+    private Rigidbody2D rb;
+    private float direcaoHorizontal;
+
+    private void Start()
     {
-        // Pega o Rigidbody2D automaticamente se não arrastar manualmente
         rb = GetComponent<Rigidbody2D>();
-        
-        if (rb == null)
-        {
-            Debug.LogError("Error: Rigidbody2D not found on Player!");
-        }
+    }
+
+    private void OnEnable()
+    {
+        moverAcao.Enable();
+        pularAcao.Enable();
+        dashAcao.Enable(); // Não esqueça de ativar!
+    }
+
+    private void OnDisable()
+    {
+        moverAcao.Disable();
+        pularAcao.Disable();
+        dashAcao.Disable();
     }
 
     void Update()
     {
-        // Leitura de Input (Setas ou A/D)
-        float inputX = Input.GetAxis("Horizontal");
-        
-        // Aplica velocidade no eixo X
-        rb.linearVelocity = new Vector2(inputX * moveSpeed, rb.linearVelocity.y);
+        // Se estiver no meio do dash, ignora os comandos normais de andar e pular
+        if (estaNoDash) return;
 
-        // Pulo (Espaço)
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        direcaoHorizontal = moverAcao.ReadValue<float>();
+
+        estaNoChao = Physics2D.OverlapCircle(checadorDeChao.position, 0.2f, camadaChao);
+
+        if (pularAcao.WasPressedThisFrame() && estaNoChao)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            isGrounded = false;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, forcaPulo);
+        }
+
+        // Verifica se apertou o botão de Dash e se ele não está no cooldown
+        if (dashAcao.WasPressedThisFrame() && podeDash)
+        {
+            StartCoroutine(ExecutarDash());
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void FixedUpdate()
     {
-        // Verifica a Tag "Chao" (que você criou como 'Chao' ou 'Chao')
-        if (collision.gameObject.CompareTag("Chao"))
-        {
-            isGrounded = true;
-        }
+        // Se estiver no meio do dash, a física do FixedUpdate normal é ignorada
+        if (estaNoDash) return;
+
+        rb.linearVelocity = new Vector2(direcaoHorizontal * velocidade, rb.linearVelocity.y);
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    // Corotina que controla o tempo e a força do Dash
+    private IEnumerator ExecutarDash()
     {
-        if (collision.gameObject.CompareTag("Chao"))
-        {
-            isGrounded = false;
-        }
+        podeDash = false;
+        estaNoDash = true;
+
+        // Guarda a gravidade original e zera ela para o player não cair durante o dash
+        float gravidadeOriginal = rb.gravityScale;
+        rb.gravityScale = 0f;
+
+        // Descobre para onde o jogador está olhando. Se não estiver apertando nada, usa a direção padrão (1 ou -1)
+        float direcaoDash = direcaoHorizontal != 0 ? Mathf.Sign(direcaoHorizontal) : (transform.localScale.x > 0 ? 1 : -1);
+
+        // Aplica a velocidade extrema do dash no eixo X
+        rb.linearVelocity = new Vector2(direcaoDash * velocidadeDash, 0f);
+
+        // Espera o tempo de duração do dash acabar
+        yield return new WaitForSeconds(duracaoDash);
+
+        // Devolve a gravidade normal e avisa que o dash acabou
+        rb.gravityScale = gravidadeOriginal;
+        estaNoDash = false;
+
+        // Espera o tempo de recarga (cooldown) para permitir o próximo dash
+        yield return new WaitForSeconds(cooldownDash);
+        podeDash = true;
     }
 }

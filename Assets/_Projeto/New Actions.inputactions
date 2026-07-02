@@ -1,0 +1,85 @@
+{
+    "version": 1,
+    "name": "New Actions",
+    "maps": [
+        {
+            "name": "moverAcao",
+            "id": "9887ba5c-a4c1-4f72-bd37-ec6be74fe8b2",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "adfeea05-f10b-4abb-87a5-b4db9d8f5703",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "1D Axis",
+                    "id": "5e65266a-decc-4dda-bac4-3888176b4e0f",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "076e1fdb-a21c-4846-820b-a20f8e343926",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ce64c8c3-5d3a-4b9b-8ddc-16a29dc9eea5",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "pularAcao",
+            "id": "cacb9862-659c-48e7-833a-fce7cfe4f8d8",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "5cc5ca85-58fc-488a-8909-ab65a05945e2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "901f8d0b-0f6a-48bd-bd94-2ef752ecfa62",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
