@@ -8,7 +8,6 @@ public class GerenciadorFase : MonoBehaviour
     [Header("Configurações Visuais")]
     [SerializeField] private GameObject painelVitoria; // O painel ou texto que vai aparecer
     [SerializeField] private float tempoDeEspera = 3f;   // Quanto tempo o jogo fica congelado antes de mudar de fase
-
     private bool jaGanhou = false;
 
     private void Awake()
@@ -50,17 +49,6 @@ public class GerenciadorFase : MonoBehaviour
         Time.timeScale = 1f;
 
         // 5. Carrega a próxima fase na fila do Build Settings
-        int proximoIndiceDaCena = SceneManager.GetActiveScene().buildIndex + 1;
-        
-        // Verifica se existe uma próxima fase, se não existir, volta para a primeira (ou menu)
-        if (proximoIndiceDaCena < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(proximoIndiceDaCena);
-        }
-        else
-        {
-            Debug.Log("Você zerou o jogo! Voltando para a primeira fase.");
-            SceneManager.LoadScene(0); 
-        }
+        SceneManager.LoadScene(1);
     }
 }
