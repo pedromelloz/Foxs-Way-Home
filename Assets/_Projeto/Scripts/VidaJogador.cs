@@ -10,7 +10,10 @@ public class VidaJogador : MonoBehaviour
 
     [Header("Interface de Vidas (UI)")]
     // Arraste os 3 objetos de imagem de coração para esta lista no Inspector
-    [SerializeField] private Image[] iconesCoracao; 
+    [SerializeField] private Image[] iconesCoracao;
+
+    [Header("Áudio de Dano")]
+    [SerializeField] private AudioClip somDano;
 
     void Start()
     {
@@ -22,6 +25,8 @@ public class VidaJogador : MonoBehaviour
     {
         vidaAtual -= quantidade;
         AtualizarInterfaceVida();
+        //PlayerController.PlayOneShot(somDano);
+        
 
         if (vidaAtual <= 0)
         {

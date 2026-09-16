@@ -10,6 +10,7 @@ public class InimigoPatrulha : MonoBehaviour
 
     [Header("Configurações de Ataque")]
     [SerializeField] private int danoNoPlayer = 1;
+    public PlayerController PlayerController;
     [SerializeField] private float tempoEntreAtaques = 1f; // Tempo para o player não morrer na hora
     private float cronometroAtaque;
 
@@ -53,7 +54,8 @@ public class InimigoPatrulha : MonoBehaviour
         {
             if (colisor.TryGetComponent<VidaJogador>(out VidaJogador vidaDoPlayer))
             {
-                vidaDoPlayer.TomarDano(danoNoPlayer);
+                vidaDoPlayer.TomarDano(danoNoPlayer);   
+                PlayerController.TomarDano();
                 cronometroAtaque = tempoEntreAtaques; // Inicia o tempo de espera para o próximo dano
             }
         }

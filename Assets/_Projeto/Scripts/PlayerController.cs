@@ -7,6 +7,19 @@ public class PlayerController : MonoBehaviour
     [Header("Configurações de Movimento")]
     [SerializeField] private float velocidade = 8f;
     [SerializeField] private float forcaPulo = 12f;
+    [SerializeField] private AudioClip somDash;
+    [SerializeField] private AudioClip somDano;
+
+    [Header("Configurações de Áudio dos Passos")]
+    [SerializeField] public AudioSource fonteAudio;
+    [SerializeField] private AudioClip somPasso;
+    [SerializeField] private float intervaloPassos = 0.35f; // Tempo em segundos entre cada passo
+    [SerializeField] private float pitchMinimo = 0.85f;      // Variação mais grave
+    [SerializeField] private float pitchMaximo = 1.15f;      // Variação mais aguda
+    private float tempoProximoPasso;
+
+    [Header("Efeitos Visuais")]
+    [SerializeField] private ParticleSystem particulasDash; 
 
     [Header("Configurações de Dash")]
     [SerializeField] private float velocidadeDash = 24f;
@@ -23,6 +36,9 @@ public class PlayerController : MonoBehaviour
     [Header("Verificação de Chão")]
     [SerializeField] private Transform checadorDeChao;
     [SerializeField] private LayerMask camadaChao;
+
+
+
     private bool estaNoChao;
 
     private Rigidbody2D rb;
@@ -32,12 +48,21 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
 
+    public void TomarDano()
+    {
+        fonteAudio.PlayOneShot(somDano);
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         // Pega as referências do Animator e do SpriteRenderer no GameObject da Raposa
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        if (fonteAudio == null)
+        {
+            fonteAudio = GetComponent<AudioSource>();
+        }   
     }
 
     private void OnEnable()
@@ -86,7 +111,33 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(ExecutarDash());
         }
+        GerenciarSomPassos();
     }
+
+    private void GerenciarSomPassos()
+    {
+        // Só toca o som se a raposa estiver no chão, andando (direção != 0) e fora do dash
+        bool estaAndando = Mathf.Abs(direcaoHorizontal) > 0.1f;
+
+        if (estaNoChao && estaAndando && !estaNoDash)
+        {
+            if (Time.time >= tempoProximoPasso)
+            {
+                TocarSomPassoComPitchAleatorio();
+                tempoProximoPasso = Time.time + intervaloPassos;
+            }
+        }
+    }
+    private void TocarSomPassoComPitchAleatorio()
+    {
+        if (fonteAudio != null && somPasso != null)
+        {
+            // Sortia um pitch aleatório entre o mínimo e o máximo definidos
+            fonteAudio.pitch = Random.Range(pitchMinimo, pitchMaximo);
+            fonteAudio.PlayOneShot(somPasso);
+        }
+    }
+
 
     void FixedUpdate()
     {
@@ -115,6 +166,16 @@ public class PlayerController : MonoBehaviour
         podeDash = false;
         estaNoDash = true;
 
+        if (particulasDash != null)
+        {
+            particulasDash.Play();
+        }
+        if (fonteAudio != null && somDash != null)
+        {
+            fonteAudio.pitch = 1f; // Garante que o pitch volte ao normal (caso tenha mudado nos passos)
+            fonteAudio.PlayOneShot(somDash);
+        }
+
         float gravidadeOriginal = rb.gravityScale;
         rb.gravityScale = 0f;
 
@@ -124,6 +185,11 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(direcaoDash * velocidadeDash, 0f);
 
         yield return new WaitForSeconds(duracaoDash);
+
+        if (particulasDash != null)
+        {
+            particulasDash.Stop();
+        }
 
         rb.gravityScale = gravidadeOriginal;
         estaNoDash = false;
