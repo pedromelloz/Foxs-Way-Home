@@ -37,7 +37,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform checadorDeChao;
     [SerializeField] private LayerMask camadaChao;
 
+    [Header("Configurações de Pisão no Inimigo")]
+    [SerializeField] private float forcaPuloCabeca = 8f;
 
+    private VidaJogador scriptVida;
 
     private bool estaNoChao;
 
@@ -55,6 +58,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        scriptVida = GetComponent<VidaJogador>();
         rb = GetComponent<Rigidbody2D>();
         // Pega as referências do Animator e do SpriteRenderer no GameObject da Raposa
         anim = GetComponent<Animator>();
@@ -111,6 +115,7 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(ExecutarDash());
         }
+        
         GerenciarSomPassos();
     }
 
@@ -196,5 +201,31 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(cooldownDash);
         podeDash = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Dano"))
+        {
+            TomarDano();
+            scriptVida.TomarDano(1);
+        }
+        // Verifica se o Trigger que encostou é o inimigo
+        if (collision.CompareTag("Inimigo"))
+        {
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+            // Só mata o inimigo se o player estiver caindo (velocidade Y <= 0)
+            if (rb != null && rb.linearVelocity.y <= 0.1f)
+            {
+                // 1. Dá o pulinho para cima
+                Vector2 vel = rb.linearVelocity;
+                vel.y = forcaPuloCabeca;
+                rb.linearVelocity = vel;
+
+                // 2. Destrói o Inimigo
+                Destroy(collision.gameObject);
+                Debug.Log("Pisa no inimigo acionado via Trigger do pé!");
+            }
+        }
     }
 }

@@ -8,6 +8,8 @@ TagManager:
   - Meta
   - Perigo
   - Jogador
+  - Dano
+  - Inimigo
   layers:
   - Default
   - TransparentFX
