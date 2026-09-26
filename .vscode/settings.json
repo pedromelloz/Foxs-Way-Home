@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Foxs-Way-Home.slnx",
+    "dotnet.defaultSolution": "Fox's Way Home.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
