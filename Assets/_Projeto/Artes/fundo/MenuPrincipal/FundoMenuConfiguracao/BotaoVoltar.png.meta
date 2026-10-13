@@ -1,0 +1,279 @@
+fileFormatVersion: 2
+guid: fa26694ca01a8c745a277cd4ec98d5e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4824802457941397013
+    second: BotaoVoltar_0
+  - first:
+      213: -2706092542548193174
+    second: BotaoVoltar_1
+  - first:
+      213: 7041564971125499374
+    second: BotaoVoltar_2
+  - first:
+      213: 1039256949236306808
+    second: BotaoVoltar_3
+  - first:
+      213: 6018448069823546291
+    second: BotaoVoltar_4
+  - first:
+      213: -7885277012212861444
+    second: BotaoVoltar_5
+  - first:
+      213: -1913949658961411581
+    second: BotaoVoltar_6
+  - first:
+      213: 5807128233589121612
+    second: BotaoVoltar_7
+  - first:
+      213: 9042656276338634538
+    second: BotaoVoltar_8
+  - first:
+      213: 8841464101668490274
+    second: BotaoVoltar_9
+  - first:
+      213: 5445005080198117346
+    second: BotaoVoltar_10
+  - first:
+      213: -6767340590670312819
+    second: BotaoVoltar_11
+  - first:
+      213: -1278195844176173351
+    second: BotaoVoltar_12
+  - first:
+      213: 331443635267078724
+    second: BotaoVoltar_13
+  - first:
+      213: -1332848882324107678
+    second: BotaoVoltar_14
+  - first:
+      213: 405956742364539438
+    second: BotaoVoltar_15
+  - first:
+      213: -3248508062442022901
+    second: BotaoVoltar_16
+  - first:
+      213: 4935247112374777749
+    second: BotaoVoltar_17
+  - first:
+      213: 4839534392914609329
+    second: BotaoVoltar_18
+  - first:
+      213: -2536435013292856126
+    second: BotaoVoltar_19
+  - first:
+      213: -2726816230001868837
+    second: BotaoVoltar_20
+  - first:
+      213: 7057544504692017245
+    second: BotaoVoltar_21
+  - first:
+      213: 4603348130461063345
+    second: BotaoVoltar_22
+  - first:
+      213: 8641058159631225002
+    second: BotaoVoltar_23
+  - first:
+      213: 287888098873378205
+    second: BotaoVoltar_24
+  - first:
+      213: 2431852773044895868
+    second: BotaoVoltar_25
+  - first:
+      213: -6051528468475580742
+    second: BotaoVoltar_26
+  - first:
+      213: 2580794258159385412
+    second: BotaoVoltar_27
+  - first:
+      213: -5036168310490185907
+    second: BotaoVoltar_28
+  - first:
+      213: 7978739343397751599
+    second: BotaoVoltar_29
+  - first:
+      213: -6167276810132885988
+    second: BotaoVoltar_30
+  - first:
+      213: 9090160481370990576
+    second: BotaoVoltar_31
+  - first:
+      213: -2734929107799639201
+    second: BotaoVoltar_32
+  - first:
+      213: -6857481119454428008
+    second: BotaoVoltar_33
+  - first:
+      213: 8517833999704596070
+    second: BotaoVoltar_34
+  - first:
+      213: -4358006040665750605
+    second: BotaoVoltar_35
+  - first:
+      213: -3163844186145200037
+    second: BotaoVoltar_36
+  - first:
+      213: 7962493779611304638
+    second: BotaoVoltar_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BotaoVoltar_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 237
+        width: 518
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1b8f63abbda0db0800000000000000
+      internalID: -4824802457941397013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BotaoVoltar_1
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 237
+        width: 518
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a5980600e6d0c4f9121539a7fab0c5
+      internalID: -889013304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0099ffd1b96a9d143b16fd8a07e9b7ab
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1186.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      BotaoVoltar_0: -4824802457941397013
+      BotaoVoltar_1: -889013304
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,808 @@
+fileFormatVersion: 2
+guid: 234ab3b58c7396149ac7ab58e49f8afe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -734808630203057397
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_0
+  - first:
+      213: 5575381477122528518
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_1
+  - first:
+      213: -1259114467309655945
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_2
+  - first:
+      213: -8716845656188671317
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_3
+  - first:
+      213: 2160466734046082719
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_4
+  - first:
+      213: 1515220713923435738
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_5
+  - first:
+      213: 8471487594591652555
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_6
+  - first:
+      213: -5557918970811410403
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_7
+  - first:
+      213: -3898036470594261582
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_8
+  - first:
+      213: 8941127542119745243
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_9
+  - first:
+      213: 9210184801884460921
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_10
+  - first:
+      213: 1813024538909795362
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_11
+  - first:
+      213: 7656556026667257624
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_12
+  - first:
+      213: 7154575917963874779
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_13
+  - first:
+      213: -185265039326938384
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_14
+  - first:
+      213: 1913590307581582836
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_15
+  - first:
+      213: -884135405436265061
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_16
+  - first:
+      213: 7052847386732793370
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_17
+  - first:
+      213: -2575756767447398845
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_18
+  - first:
+      213: -1262680803847312474
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_19
+  - first:
+      213: 7197973359272365430
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_20
+  - first:
+      213: 4455822997471063471
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_21
+  - first:
+      213: 2904542418187963255
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_22
+  - first:
+      213: 1062448802584736388
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_23
+  - first:
+      213: -7180939233776171793
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_24
+  - first:
+      213: 7111875542538398074
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_25
+  - first:
+      213: -1085815826036411289
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_26
+  - first:
+      213: 5323016799571106828
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_27
+  - first:
+      213: 4172388847319280617
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_28
+  - first:
+      213: 8081821520781105015
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_29
+  - first:
+      213: -1916659551849193668
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_30
+  - first:
+      213: 4836346298854505965
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_31
+  - first:
+      213: 1382333408733115701
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_32
+  - first:
+      213: -519283045312450962
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_33
+  - first:
+      213: -5733547181948126347
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_34
+  - first:
+      213: -4478157339972617834
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_35
+  - first:
+      213: 775112942783900586
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_36
+  - first:
+      213: -5083194929768737651
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_37
+  - first:
+      213: -2175197384510052837
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_38
+  - first:
+      213: -3308456489869680542
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_39
+  - first:
+      213: -335526397232121369
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_40
+  - first:
+      213: 3138645605107129157
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_41
+  - first:
+      213: -7536202035982875244
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_42
+  - first:
+      213: 5985385428638791088
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_43
+  - first:
+      213: -2906676012485139582
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_44
+  - first:
+      213: 2355725932481208820
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_45
+  - first:
+      213: -3347046941689579873
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_46
+  - first:
+      213: -8195458192621072362
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_47
+  - first:
+      213: 7925235237854776793
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_48
+  - first:
+      213: -9148137665423894422
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_49
+  - first:
+      213: 6639972002302319369
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_50
+  - first:
+      213: 3554476638409923021
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_51
+  - first:
+      213: -7399014476544708741
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_52
+  - first:
+      213: -3155019224482536556
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_53
+  - first:
+      213: 8799591113287015367
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_54
+  - first:
+      213: -8352328314139915974
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_55
+  - first:
+      213: 3271922559715468989
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_56
+  - first:
+      213: 2824701815585989090
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_57
+  - first:
+      213: -6840080768959742029
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_58
+  - first:
+      213: -812676523372557477
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_59
+  - first:
+      213: 4919547326814500089
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_60
+  - first:
+      213: -5895170464885152054
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_61
+  - first:
+      213: -4638303547467703688
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_62
+  - first:
+      213: 283305703902342124
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_63
+  - first:
+      213: -5505392345381769814
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_64
+  - first:
+      213: 4719604373352182257
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_65
+  - first:
+      213: 7108789699766496544
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_66
+  - first:
+      213: 3570012176656369779
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_67
+  - first:
+      213: 3975010063272838546
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_68
+  - first:
+      213: 1637210812703727830
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_69
+  - first:
+      213: 2005321627779353701
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_70
+  - first:
+      213: -5935138343912277857
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_71
+  - first:
+      213: 3830305899959019659
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_72
+  - first:
+      213: 8845821838674795747
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_73
+  - first:
+      213: -2355917856101948887
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_74
+  - first:
+      213: 7874370242329577745
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_75
+  - first:
+      213: -1283099879256101143
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_76
+  - first:
+      213: -1440159577553106140
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_77
+  - first:
+      213: -1912715880581520058
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_78
+  - first:
+      213: -2534625692745253605
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_79
+  - first:
+      213: 8700845688511808629
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_80
+  - first:
+      213: -5557000970873877118
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_81
+  - first:
+      213: 1794050127118524958
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_82
+  - first:
+      213: -1094975961715066048
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_83
+  - first:
+      213: 8370656300063908014
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_84
+  - first:
+      213: 4451377394653767266
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_85
+  - first:
+      213: -3949451000763117508
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_86
+  - first:
+      213: 5709776127330322779
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_87
+  - first:
+      213: 7928742184110574118
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_88
+  - first:
+      213: -2391853640497732708
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_89
+  - first:
+      213: 726236346227842499
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_90
+  - first:
+      213: -5253342343589660111
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_91
+  - first:
+      213: 4443856226420836549
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_92
+  - first:
+      213: -5000490944582721420
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_93
+  - first:
+      213: -6029858067271603405
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_94
+  - first:
+      213: 4849268728253321090
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_95
+  - first:
+      213: 5889163679648088580
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_96
+  - first:
+      213: 4594633496823224942
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_97
+  - first:
+      213: -2446947749019334714
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_98
+  - first:
+      213: -7223620526479639606
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_99
+  - first:
+      213: 2055714533807079133
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_100
+  - first:
+      213: -5102433762716100637
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_101
+  - first:
+      213: 1272148046812094997
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_102
+  - first:
+      213: 2394872358164196017
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_103
+  - first:
+      213: -1951001964039716352
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_104
+  - first:
+      213: 3547682628183622393
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_105
+  - first:
+      213: -4154130701821567431
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_106
+  - first:
+      213: 7401085186408066344
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_107
+  - first:
+      213: -6984217354350199534
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_108
+  - first:
+      213: -5152435822671349852
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_109
+  - first:
+      213: 401731929637279647
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_110
+  - first:
+      213: 6822502212279924869
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_111
+  - first:
+      213: -5237296952338169076
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_112
+  - first:
+      213: -3363774504575646479
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_113
+  - first:
+      213: -8178396995238140984
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_114
+  - first:
+      213: -5056773251373802208
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_115
+  - first:
+      213: -3215909885915991731
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_116
+  - first:
+      213: 8746664569005036855
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_117
+  - first:
+      213: -5596274784493348724
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_118
+  - first:
+      213: 6069769222029681200
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_119
+  - first:
+      213: 8064216464383280463
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_120
+  - first:
+      213: -7863970805646318868
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_121
+  - first:
+      213: -7284378864880458701
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_122
+  - first:
+      213: 4662391184385742534
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_123
+  - first:
+      213: 9144458088056306434
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_124
+  - first:
+      213: -8748604026135097021
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_125
+  - first:
+      213: -507813010755410017
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_126
+  - first:
+      213: -7507428622952775470
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_127
+  - first:
+      213: -8362657990822837101
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_128
+  - first:
+      213: -9068918502417867746
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_129
+  - first:
+      213: -6794304019666890141
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_130
+  - first:
+      213: -5861066110589207153
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_131
+  - first:
+      213: -6998603047000391386
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_132
+  - first:
+      213: -7333199043763984977
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_133
+  - first:
+      213: 374754755499097328
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_134
+  - first:
+      213: 1674159541960254017
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_135
+  - first:
+      213: -4319867792436601608
+    second: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_136
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0bfadaa17f6dc5f0800000000000000
+      internalID: -734808630203057397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 464
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6055e2fe9ebbf5d40800000000000000
+      internalID: 5575381477122528518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 464
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778e374201ab68ee0800000000000000
+      internalID: -1259114467309655945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 464
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baaa7fc3f0b870780800000000000000
+      internalID: -8716845656188671317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 464
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f967dd74c058bfd10800000000000000
+      internalID: 2160466734046082719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 464
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc58b91635270510800000000000000
+      internalID: 1515220713923435738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c85d392ffee554886ff9a417c5867a
+      internalID: -1331359684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 14
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b948cebb82e61499084a82a97c7a80
+      internalID: -1707087932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 14
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1005fe9cd1f4c8a488a267ef4e5ae701
+      internalID: 1009562652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 14
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16828ed6c56ccaf4483d362b06d5a5e9
+      internalID: -1022044475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 14
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aedc06b7d6d669468f433f2dd888399
+      internalID: -1812149644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6579F728-37F8-4B3C-9367-CC1ECE6676F9_11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 14
+        width: 256
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58409f773997ba4c8bffbcba9a7c39f
+      internalID: -722189933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c9488c02dac4cbf4aa57d05f19b95a5a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":450.0},"gridSpriteOffset":{"x":0.0,"y":110.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
+    nameFileIdTable:
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_0: -734808630203057397
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_1: 5575381477122528518
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_10: -1812149644
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_11: -722189933
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_2: -1259114467309655945
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_3: -8716845656188671317
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_4: 2160466734046082719
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_5: 1515220713923435738
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_6: -1331359684
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_7: -1707087932
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_8: 1009562652
+      6579F728-37F8-4B3C-9367-CC1ECE6676F9_9: -1022044475
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
