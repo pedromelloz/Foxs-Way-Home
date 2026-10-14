@@ -16,7 +16,6 @@ public class AudioMenuFox : MonoBehaviour
     private bool avesVisiveis;
     private readonly Dictionary<AudioSource, float> volumesOriginais = new Dictionary<AudioSource, float>();
     private float proximaFolha;
-    private float fimClique;
     private bool cliqueAtivoAnterior;
     private float musica, efeitos;
     private bool musicaLigada, efeitosLigados;
@@ -78,6 +77,7 @@ public class AudioMenuFox : MonoBehaviour
         passaroMovimento = Buscar("PassaroMovimento");
         folhasClique = Buscar("FolhasClique");
         ConectarControles();
+        AtualizarVolumesMenu();
         if (brisa.clip != null) brisa.Play();
         proximaFolha = Time.unscaledTime + 0.5f;
     }
@@ -90,7 +90,7 @@ public class AudioMenuFox : MonoBehaviour
 
     private GameObject Buscar(string nome)
     {
-        foreach (var t in Resources.FindObjectsOfTypeAll<Transform>())
+        foreach (var t in FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             if (t.gameObject.scene.IsValid() && t.gameObject.scene.isLoaded && t.name == nome)
                 return t.gameObject;
         return null;
@@ -146,7 +146,9 @@ public class AudioMenuFox : MonoBehaviour
         {
             if (fonte == brisa || fonte == folhas || fonte == passaros || fonte == clique) continue;
             if (!volumesOriginais.ContainsKey(fonte)) volumesOriginais[fonte] = fonte.volume;
-            bool ehMusica = fonte.clip != null && fonte.clip.name.ToLowerInvariant().Contains("fase_01");
+            // Trilha de fase/menu: fontes em loop com nome musical ou clip fase_01.
+            string nome = fonte.clip != null ? fonte.clip.name.ToLowerInvariant() : "";
+            bool ehMusica = nome.Contains("fase_01") || nome.Contains("musica") || nome.Contains("music") || nome.Contains("trilha");
             float escala = ehMusica ? (musicaLigada ? musica : 0f) : (efeitosLigados ? efeitos : 0f);
             fonte.volume = volumesOriginais[fonte] * escala;
         }
@@ -163,26 +165,30 @@ public class AudioMenuFox : MonoBehaviour
             proximaFolha = Time.unscaledTime + 13f;
         }
 
+        // Verifica cada passaro individualmente: o pai pode estar fora da tela.
         bool visivel = false;
         if (passaroMovimento != null && passaroMovimento.activeInHierarchy)
         {
-            var rt = passaroMovimento.GetComponent<RectTransform>();
-            if (rt != null)
+            foreach (var rt in passaroMovimento.GetComponentsInChildren<RectTransform>())
             {
+                if (rt == passaroMovimento.GetComponent<RectTransform>()) continue;
+                if (!rt.gameObject.activeInHierarchy) continue;
                 var cantos = new Vector3[4];
                 rt.GetWorldCorners(cantos);
                 var canvas = rt.GetComponentInParent<Canvas>();
                 Camera cam = canvas != null && canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : Camera.main;
-                for (int i = 0; i < 4; i++)
+                Vector2 min = RectTransformUtility.WorldToScreenPoint(cam, cantos[0]);
+                Vector2 max = RectTransformUtility.WorldToScreenPoint(cam, cantos[2]);
+                if (max.x >= 0 && min.x <= Screen.width && max.y >= 0 && min.y <= Screen.height)
                 {
-                    Vector2 ponto = RectTransformUtility.WorldToScreenPoint(cam, cantos[i]);
-                    if (ponto.x >= 0 && ponto.x <= Screen.width && ponto.y >= 0 && ponto.y <= Screen.height)
-                    { visivel = true; break; }
+                    visivel = true;
+                    break;
                 }
             }
         }
         if (visivel && !avesVisiveis && passaros.clip != null) passaros.Play();
         if (!visivel && avesVisiveis) passaros.Stop();
+        if (visivel && !passaros.isPlaying && passaros.clip != null) passaros.Play();
         avesVisiveis = visivel;
 
         // Uma unica reproducao por ativacao da animacao, sem reiniciar em loop.
