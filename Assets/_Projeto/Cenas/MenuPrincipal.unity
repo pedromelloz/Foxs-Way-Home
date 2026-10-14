@@ -4540,6 +4540,8 @@ MonoBehaviour:
   painelConfig: {fileID: 1492850155}
   painelCredits: {fileID: 1077796073}
   efeitoFolhas: {fileID: 1365649410}
+  folhasCliqueConfig: {fileID: 2122584288}
+  folhasCliqueCredits: {fileID: 527614121}
   botaoJogar: {fileID: 1655634338}
   botaoConfig: {fileID: 931317741}
   botaoCredits: {fileID: 1673646781}
