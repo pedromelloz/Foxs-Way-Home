@@ -197,7 +197,6 @@ public class AudioMenuFox : MonoBehaviour
         brisa.volume = .20f * v;
         folhas.volume = .085f * v;
         passaros.volume = .36f * v;
-        clique.volume = .42f * v;
     }
 
     private void OnDestroy()
