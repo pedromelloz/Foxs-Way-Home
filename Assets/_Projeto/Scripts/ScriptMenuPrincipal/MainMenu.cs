@@ -14,6 +14,10 @@ public class MainMenu : MonoBehaviour
     [Header("Efeito das folhas")]
     public EfeitoCliqueFolhas efeitoFolhas;
 
+    [Header("Folhas especificas dos paineis")]
+    public GameObject folhasCliqueConfig;
+    public GameObject folhasCliqueCredits;
+
     [Header("Botoes")]
     public RectTransform botaoJogar;
     public RectTransform botaoConfig;
@@ -79,7 +83,9 @@ public class MainMenu : MonoBehaviour
         efeitoFolhas.Reproduzir(
             botaoVoltarConfig,
             VoltarMenu,
-            0.25f
+            0.25f,
+            false,
+            folhasCliqueConfig
         );
     }
 
@@ -89,7 +95,9 @@ public class MainMenu : MonoBehaviour
         efeitoFolhas.Reproduzir(
             botaoVoltarCredits,
             VoltarMenu,
-            0.25f
+            0.25f,
+            false,
+            folhasCliqueCredits
         );
     }
 
