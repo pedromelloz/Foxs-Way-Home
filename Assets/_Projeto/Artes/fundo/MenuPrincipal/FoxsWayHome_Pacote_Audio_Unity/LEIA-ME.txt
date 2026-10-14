@@ -1,0 +1,25 @@
+# Integração de áudio do menu — Fox's Way Home
+
+Este pacote NÃO é um commit do GitHub. Contém os quatro áudios selecionados e um script de integração automática, sem alterar artes, animações ou cenas.
+
+## Instalação
+1. Feche o modo Play na Unity.
+2. Abra a pasta do seu projeto Unity no Explorador de Arquivos.
+3. Copie a pasta `Assets/_Projeto` deste pacote para a pasta `Assets/_Projeto` do projeto (mesclando pastas).
+4. Aguarde a Unity importar os quatro arquivos OGG e o script C#.
+5. Abra a cena `Assets/_Projeto/Cenas/MenuPrincipal.unity`.
+6. Clique em Play e confira os sons e os sliders/toggles de Configurações.
+
+## Comportamento
+- Brisa fraca: contínua a 20% (antes do slider de efeitos).
+- Folhas naturais: 8,5%, tocadas a cada 13 segundos.
+- Pássaros: 36%, ativados quando a região `PassaroMovimento` entra na tela.
+- Clique com folhas: 42%, disparado ao ativar `FolhasClique` (uma vez por clique).
+- Preferências: PlayerPrefs; efeitos controlam os sons de menu e efeitos da fase, música controla fontes com clip `fase_01`.
+
+## Limitações e testes
+- Os arquivos originais foram convertidos para OGG para reduzir o pacote, sem substituir suas artes.
+- A sincronização visual dos pássaros usa a posição do RectTransform; confira em Play porque depende do Canvas.
+- O clique dura 3,77 s e a animação está configurada para aproximadamente 5 s; a sincronização fina permanece para ajuste manual.
+- Não foi possível compilar/testar este pacote no Editor da Unity neste ambiente.
+- Este pacote NÃO está na branch master e NÃO foi feito commit.
