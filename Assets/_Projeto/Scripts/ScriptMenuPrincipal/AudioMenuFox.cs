@@ -10,13 +10,12 @@ public class AudioMenuFox : MonoBehaviour
 {
     private const string Prefix = "FoxAudio_";
     private static AudioMenuFox instancia;
-    private AudioSource brisa, folhas, passaros, clique;
+    private AudioSource brisa, folhas, passaros;
     private GameObject passaroMovimento;
     private GameObject folhasClique;
     private bool avesVisiveis;
     private readonly Dictionary<AudioSource, float> volumesOriginais = new Dictionary<AudioSource, float>();
     private float proximaFolha;
-    private bool cliqueAtivoAnterior;
     private float musica, efeitos;
     private bool musicaLigada, efeitosLigados;
 
@@ -38,7 +37,7 @@ public class AudioMenuFox : MonoBehaviour
         brisa = CriarFonte("BrisaFraca", true, .20f);
         folhas = CriarFonte("FolhasNaturais", false, .085f);
         passaros = CriarFonte("PassarosSuaves", false, .36f);
-        clique = CriarFonte("CliqueFolhasPingPong", false, .42f);
+        // CliqueFolhasPingPong e controlado diretamente por EfeitoCliqueFolhas.
         SceneManager.sceneLoaded += CenaCarregada;
     }
 
@@ -55,11 +54,10 @@ public class AudioMenuFox : MonoBehaviour
 
     private void CenaCarregada(Scene cena, LoadSceneMode modo)
     {
-        brisa.Stop(); folhas.Stop(); passaros.Stop(); clique.Stop();
+        brisa.Stop(); folhas.Stop(); passaros.Stop();
         passaroMovimento = null;
         folhasClique = null;
         avesVisiveis = false;
-        cliqueAtivoAnterior = false;
         volumesOriginais.Clear();
         if (cena.name == "MenuPrincipal")
         {
@@ -135,7 +133,6 @@ public class AudioMenuFox : MonoBehaviour
         brisa.volume = .20f * v;
         folhas.volume = .085f * v;
         passaros.volume = .36f * v;
-        clique.volume = .42f * v;
         AplicarVolumesJogo();
         PlayerPrefs.Save();
     }
@@ -144,7 +141,7 @@ public class AudioMenuFox : MonoBehaviour
     {
         foreach (var fonte in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
         {
-            if (fonte == brisa || fonte == folhas || fonte == passaros || fonte == clique) continue;
+            if (fonte == brisa || fonte == folhas || fonte == passaros) continue;
             if (!volumesOriginais.ContainsKey(fonte)) volumesOriginais[fonte] = fonte.volume;
             // Trilha de fase/menu: fontes em loop com nome musical ou clip fase_01.
             string nome = fonte.clip != null ? fonte.clip.name.ToLowerInvariant() : "";
@@ -191,11 +188,7 @@ public class AudioMenuFox : MonoBehaviour
         if (visivel && !passaros.isPlaying && passaros.clip != null) passaros.Play();
         avesVisiveis = visivel;
 
-        // Uma unica reproducao por ativacao da animacao, sem reiniciar em loop.
-        bool ativo = folhasClique != null && folhasClique.activeInHierarchy;
-        if (ativo && !cliqueAtivoAnterior && clique.clip != null) clique.Play();
-        if (!ativo && cliqueAtivoAnterior) clique.Stop();
-        cliqueAtivoAnterior = ativo;
+        // O clique e reproduzido por EfeitoCliqueFolhas, no momento exato da ativacao.
     }
 
     private void AtualizarVolumesMenu()
