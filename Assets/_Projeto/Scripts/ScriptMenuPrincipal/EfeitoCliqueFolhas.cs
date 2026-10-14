@@ -13,6 +13,16 @@ public class EfeitoCliqueFolhas : MonoBehaviour
     public CanvasGroup fadeTela;
 
     private bool animando = false;
+    private AudioSource audioClique;
+
+    private void Awake()
+    {
+        audioClique = gameObject.AddComponent<AudioSource>();
+        audioClique.clip = Resources.Load<AudioClip>("AudioMenu/CliqueFolhasPingPong");
+        audioClique.playOnAwake = false;
+        audioClique.loop = false;
+        audioClique.spatialBlend = 0f;
+    }
 
     public void Reproduzir(
         RectTransform botao,
@@ -45,6 +55,14 @@ public class EfeitoCliqueFolhas : MonoBehaviour
         // Reinicia as cinco animações.
         folhasClique.SetActive(false);
         folhasClique.SetActive(true);
+        // O audio acompanha diretamente o inicio da animacao.
+        if (audioClique != null && audioClique.clip != null)
+        {
+            audioClique.Stop();
+            audioClique.volume = PlayerPrefs.GetInt("FoxAudio_EfeitosLigados", 1) == 1
+                ? 0.42f * PlayerPrefs.GetFloat("FoxAudio_Efeitos", 1f) : 0f;
+            audioClique.Play();
+        }
 
         foreach (Animator animator in
             folhasClique.GetComponentsInChildren<Animator>())
@@ -63,6 +81,7 @@ public class EfeitoCliqueFolhas : MonoBehaviour
 
         // Esconde as folhas.
         folhasClique.SetActive(false);
+        if (audioClique != null) audioClique.Stop();
 
         // Executa a função original do botão.
         acao?.Invoke();
