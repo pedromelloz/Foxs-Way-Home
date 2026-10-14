@@ -15,6 +15,7 @@ public class AudioMenuFox : MonoBehaviour
     private GameObject folhasClique;
     private bool avesVisiveis;
     private readonly Dictionary<AudioSource, float> volumesOriginais = new Dictionary<AudioSource, float>();
+    private readonly HashSet<AudioSource> fontesSilenciadas = new HashSet<AudioSource>();
     private float proximaFolha;
     private float musica, efeitos;
     private bool musicaLigada, efeitosLigados;
@@ -59,6 +60,7 @@ public class AudioMenuFox : MonoBehaviour
         folhasClique = null;
         avesVisiveis = false;
         volumesOriginais.Clear();
+        fontesSilenciadas.Clear();
         if (cena.name == "MenuPrincipal")
         {
             StartCoroutine(PrepararMenu());
@@ -76,6 +78,7 @@ public class AudioMenuFox : MonoBehaviour
         folhasClique = Buscar("FolhasClique");
         ConectarControles();
         AtualizarVolumesMenu();
+        AplicarVolumesJogo();
         if (brisa.clip != null) brisa.Play();
         proximaFolha = Time.unscaledTime + 0.5f;
     }
@@ -139,7 +142,7 @@ public class AudioMenuFox : MonoBehaviour
 
     private void AplicarVolumesJogo()
     {
-        foreach (var fonte in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+        foreach (var fonte in FindObjectsByType<AudioSource>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             if (fonte == brisa || fonte == folhas || fonte == passaros) continue;
             if (!volumesOriginais.ContainsKey(fonte)) volumesOriginais[fonte] = fonte.volume;
