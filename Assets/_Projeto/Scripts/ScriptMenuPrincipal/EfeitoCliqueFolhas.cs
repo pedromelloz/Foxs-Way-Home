@@ -28,12 +28,13 @@ public class EfeitoCliqueFolhas : MonoBehaviour
         RectTransform botao,
         Action acao,
         float duracaoFade = 0.25f,
-        bool manterEscuro = false)
+        bool manterEscuro = false,
+        GameObject folhasAlternativas = null)
     {
         if (!animando)
         {
             StartCoroutine(Executar(
-                botao, acao, duracaoFade, manterEscuro));
+                botao, acao, duracaoFade, manterEscuro, folhasAlternativas));
         }
     }
 
@@ -41,20 +42,27 @@ public class EfeitoCliqueFolhas : MonoBehaviour
         RectTransform botao,
         Action acao,
         float duracaoFade,
-        bool manterEscuro)
+        bool manterEscuro,
+        GameObject folhasAlternativas)
     {
         animando = true;
+        GameObject folhasAtivas = folhasAlternativas != null ? folhasAlternativas : folhasClique;
+        if (folhasAtivas == null || botao == null)
+        {
+            animando = false;
+            yield break;
+        }
 
         // Posiciona as folhas no botão clicado.
         RectTransform efeito =
-            folhasClique.GetComponent<RectTransform>();
+            folhasAtivas.GetComponent<RectTransform>();
 
         efeito.position =
             botao.TransformPoint(botao.rect.center);
 
         // Reinicia as cinco animações.
-        folhasClique.SetActive(false);
-        folhasClique.SetActive(true);
+        folhasAtivas.SetActive(false);
+        folhasAtivas.SetActive(true);
         // O audio acompanha diretamente o inicio da animacao.
         if (audioClique != null && audioClique.clip != null)
         {
@@ -65,7 +73,7 @@ public class EfeitoCliqueFolhas : MonoBehaviour
         }
 
         foreach (Animator animator in
-            folhasClique.GetComponentsInChildren<Animator>())
+            folhasAtivas.GetComponentsInChildren<Animator>())
         {
             animator.Rebind();
             animator.Update(0f);
@@ -80,7 +88,7 @@ public class EfeitoCliqueFolhas : MonoBehaviour
             AnimarFade(0f, 1f, duracaoFade));
 
         // Esconde as folhas.
-        folhasClique.SetActive(false);
+        folhasAtivas.SetActive(false);
         if (audioClique != null) audioClique.Stop();
 
         // Executa a função original do botão.
